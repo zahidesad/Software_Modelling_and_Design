@@ -4,12 +4,14 @@ import java.sql.Connection;
 
 public class Main {
     public static void main(String[] args) {
+        GoodDatabaseConnection dbInstance = GoodDatabaseConnection.getInstance(
+                "jdbc:mysql://localhost:3306//e-commerce-website",
+                "root",
+                "1234"
+        );
 
-        BadDatabaseConnection db1 = new BadDatabaseConnection();
-        BadDatabaseConnection db2 = new BadDatabaseConnection();
-
-        Connection conn1 = db1.getConnection();
-        Connection conn2 = db2.getConnection();
+        Connection conn1 = dbInstance.getConnection();
+        Connection conn2 = dbInstance.getConnection();
 
         System.out.println(conn1 == conn2);
     }
