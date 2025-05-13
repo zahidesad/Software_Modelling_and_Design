@@ -5,7 +5,7 @@ public class Client {
         TextEditor editor = new TextEditor();
         EditorHistory history = new EditorHistory();
 
-        System.out.println("Read: \"" + editor.read() + "\"");
+        System.out.println("Read: \"" + editor.getState() + "\"");
 
         editor.write("Merhaba");
         history.save(editor);
@@ -14,12 +14,12 @@ public class Client {
         history.save(editor);
 
         editor.write("!");
-        System.out.println("After writes: " + editor.read());
+        System.out.println("After writes: " + editor.getState());
 
         history.undo(editor);
-        System.out.println("After undo 1: " + editor.read());
+        System.out.println("After undo 1: " + editor.getState());
 
         history.undo(editor);
-        System.out.println("After undo 2: " + editor.read());
+        System.out.println("After undo 2: " + editor.getState());
     }
 }

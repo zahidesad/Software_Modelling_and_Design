@@ -7,7 +7,7 @@ public class EditorHistory {
     private final Stack<Memento> history = new Stack<>();
 
     public void save(TextEditor editor) {
-        history.push(editor.takeSnapshot());
+        history.push(editor.createMemento());
     }
 
     public void undo(TextEditor editor) {
