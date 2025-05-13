@@ -1,5 +1,6 @@
 package org.quiz02_preparation.behavioral_patterns.memento_pattern;
 
+// Originator
 public class TextEditor {
     private String text = "";
 

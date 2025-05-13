@@ -2,6 +2,7 @@ package org.quiz02_preparation.behavioral_patterns.memento_pattern;
 
 import java.util.Stack;
 
+// Care Taker
 public class EditorHistory {
     private final Stack<Memento> history = new Stack<>();
 
