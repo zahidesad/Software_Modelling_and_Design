@@ -4,7 +4,7 @@ import java.util.Stack;
 
 // Care Taker
 public class EditorHistory {
-    private final Stack<Memento> history = new Stack<>();
+    final Stack<Memento> history = new Stack<>();
 
     public void save(TextEditor editor) {
         history.push(editor.createMemento());

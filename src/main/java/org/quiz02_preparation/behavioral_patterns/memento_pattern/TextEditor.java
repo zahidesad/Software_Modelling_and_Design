@@ -2,7 +2,7 @@ package org.quiz02_preparation.behavioral_patterns.memento_pattern;
 
 // Originator
 public class TextEditor {
-    private String state;
+    private String state = "";
 
     public void write(String newText){
         state += newText;
